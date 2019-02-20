@@ -1,1 +1,15 @@
-<h1>edit hbs</h1>
+<h1>Edit question</h1>
+
+<form method="POST" action="/question/{{item._id}}?_method=PUT">
+  <p>
+    <label for="content">Question: </label>
+    <input type="text" name="content" id="content" value="{{item.content}}">
+  </p>
+  <p>
+    <label for="answers">Answers: </label>
+    <textarea type="text" name="answers" id="answers" rows="10" cols="30">{{item.answers}}</textarea>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>

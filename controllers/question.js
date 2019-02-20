@@ -25,10 +25,25 @@ module.exports = {
     })
   },
   edit: (req, res) => {
-    res.send('edit')
+    Question.findById(req.params.id).then(item => {
+      console.log(item)
+      res.render("question/edit", {
+        item
+      })
+    })
   },
   update: (req, res) => {
-    res.send('update')
+    const {
+      content,
+      answers
+    } = req.body
+
+    Question.findByIdAndUpdate(req.params.id, {
+      content,
+      answers: answers.split(",")
+    }).then(item => {
+      res.redirect(`/question/${item._id}`)
+    })
   },
   delete: (req, res) => {
     res.send('delete')
