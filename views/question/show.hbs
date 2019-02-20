@@ -10,3 +10,7 @@
 {{/if}}
 
 <a href="/question/{{item.id}}/edit">edit</a>
+
+<form action="/question/{{item.id}}?_method=DELETE" method="post">
+  <input type="submit" value="Delete">
+</form>

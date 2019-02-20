@@ -7,6 +7,6 @@ router.post('/', questionController.create)
 router.get('/:id', questionController.show)
 router.get('/:id/edit', questionController.edit)
 router.put('/:id', questionController.update)
-router.delete('/:id', questionController.new)
+router.delete('/:id', questionController.delete)
 
 module.exports = router

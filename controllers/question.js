@@ -46,6 +46,9 @@ module.exports = {
     })
   },
   delete: (req, res) => {
-    res.send('delete')
+    Question.findByIdAndRemove(req.params.id).then(() => {
+
+      return res.redirect('/')
+    })
   }
 }
