@@ -10,6 +10,6 @@ router.get("/", (req, res) => {
   })
 })
 
-// router.use('/question', require("./question.js"))
+router.use('/question', require("./question.js"))
 
 module.exports = router;
