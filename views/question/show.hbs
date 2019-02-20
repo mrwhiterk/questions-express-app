@@ -1,1 +1,10 @@
-<h1>show hbs</h1>
+<h1>{{item.content}}</h1>
+{{#if item.answers}}
+<ul>
+  {{#each item.answers as |answer|}}
+  <li>
+    <p>{{answer}}</p>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

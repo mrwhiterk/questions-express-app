@@ -18,7 +18,11 @@ module.exports = {
     })
   },
   show: (req, res) => {
-    res.send('show')
+    Question.findById(req.params.id).then(item => {
+      res.render("question/show", {
+        item
+      })
+    })
   },
   edit: (req, res) => {
     res.send('edit')
