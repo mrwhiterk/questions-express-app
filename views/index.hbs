@@ -5,7 +5,11 @@
   {{#each items}}
   <li>
     <a href="/question/{{id}}">{{content}}</a>
+    {{#each answers as |answer|}}
+    <p>{{answer}}</p>
+    {{/each}}
   </li>
+
   {{/each}}
 </ul>
 {{/if}}
