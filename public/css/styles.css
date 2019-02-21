@@ -1,7 +1,22 @@
 main {
-  background-color: #ccc;
   margin: 5%;
-  text-align: center;
   border-radius: 10px;
   padding: 2%;
+}
+
+main a {
+  text-decoration: none;
+  color: #000;
+}
+
+a,
+li {
+  font-size: 2rem;
+}
+
+header {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 3%;
 }
